@@ -1,5 +1,6 @@
 // image
 import logo from '../../img/dv4shapes64.svg'
+import { isNullOrUndefined } from 'util'
 // HTML markup sample
 const html = `
   <!--<app-header>-->
@@ -7,26 +8,28 @@ const html = `
   <div class="app-title">This is my title</div>
   <!--</app-header>-->
 `
-/**
- * AppHeader component sample html
- * @param {object} el DOM element to append to
- */
-export class appHeaderSample {
-  constructor() {
-    // debugger
-    // console.log('I am')
-  }
+
+// holds current element
+let el = null
+export const appHeaderSample = {
+  /**
+   * Add sample markup
+   * @param {object} parent element
+   */
   addSample(parent) {
     //debugger
     //add sample html to element
-    let el = document.createElement('app-header')
+    el = document.createElement('app-header')
     el.innerHTML = html
-    this.el = el
     parent.appendChild(el)
-  }
+  },
+  /**
+   * Remove sample element
+   * @param {*} parent
+   */
   removeSample(parent) {
     debugger
-    parent.removeChild(this.el)
+    parent.removeChild(el)
   }
 }
 
