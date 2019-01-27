@@ -9,12 +9,6 @@ const dist = path.resolve(__dirname, '../dist')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-/*
- * We've enabled UglifyJSPlugin for you! This minifies your app
- * in order to load faster and run less javascript.
- * https://github.com/webpack-contrib/uglifyjs-webpack-plugin
- */
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin
 
@@ -57,8 +51,6 @@ module.exports = {
       //copy all files from assets dir to root
       './static/'
     ]),
-    //minify javascript
-    new UglifyJSPlugin(),
     /* Bundle Analyzer - further investigation needed
 			https://www.npmjs.com/package/webpack-bundle-analyzer
 		*/

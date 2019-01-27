@@ -10,7 +10,7 @@ Just run `npm install` and all libs mentioned below will be installed.
   # 1. install webpack modules
   npm i -D webpack webpack-cli webpack-dev-server webpack-bundle-analyzer
   # 2. install other webpack util plugins
-  npm i -D html-webpack-plugin url-loader file-loader copy-webpack-plugin uglifyjs-webpack-plugin clean-webpack-plugin
+  npm i -D html-webpack-plugin url-loader file-loader copy-webpack-plugin terser-webpack-plugin clean-webpack-plugin
   # 3. install babel loaders - basics v7
   npm i -D babel-loader @babel/core @babel/preset-env @babel/plugin-proposal-class-properties @babel/plugin-proposal-decorators
   # 4. ESLint for react and styled components

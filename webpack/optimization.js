@@ -5,6 +5,11 @@
   https://webpack.js.org/configuration/optimization/
 */
 
+// FOR ES5 minifying
+// const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+// FOR ES6 minifying
+const TerserPlugin = require('terser-webpack-plugin')
+
 module.exports = {
   /*
    * SplitChunksPlugin is enabled by default and replaces
@@ -12,6 +17,7 @@ module.exports = {
    * Default configuration has 3 options: all, async or inital
    * more info https://webpack.js.org/plugins/split-chunks-plugin/
    */
+  minimizer: [new TerserPlugin()],
   splitChunks: {
     // min size 30KB
     minSize: 30000,

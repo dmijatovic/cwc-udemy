@@ -4,7 +4,7 @@
 
 module.exports = [
   {
-    test: /\.(png|jpg|gif|svg)$/i,
+    test: /\.(png|jpg|gif)$/i,
     use: [
       {
         loader: 'url-loader',
@@ -16,7 +16,7 @@ module.exports = [
     ]
   },
   {
-    test: /\.(woff(2)?|ttf|eot|svg)$/i,
+    test: /\.(woff(2)?|ttf|eot)$/i,
     use: [
       {
         loader: 'url-loader',
@@ -24,6 +24,14 @@ module.exports = [
           limit: 10240,
           name: '[name].[ext]'
         }
+      }
+    ]
+  },
+  {
+    test: /\.(svg)$/i,
+    use: [
+      {
+        loader: 'url-loader'
       }
     ]
   }
